@@ -440,13 +440,64 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" data-modal-close class="modal-close">
           <svg class="svg-modal-close" width="8" height="8">
             <use href="./images/symbol-defs-modal-copy.svg#icon-vector"></use>
           </svg>
         </button>
+        <form class="modal-form">
+          <p>Leave your contacts and we will call you back</p>
+          <label class="modal-form-field">
+            <span class="modal-form-input-desc"> Name </span>
+            <input
+              type="text"
+              name="user-name"
+              class="modal-form-input"
+              required
+              pattern="^[A-Za-zА-Яа-я]+$"
+              minlength="2"
+            />
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-desc"> Phone </span>
+            <input
+              type="tel"
+              name="user-phone"
+              class="modal-form-input"
+              required
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              title="xxx-xxx-xx-xx"
+            />
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-desc"> Email </span>
+            <input
+              type="text"
+              name="user-email"
+              class="modal-form-input"
+              required
+            />
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-desc"> Comment </span>
+            <textarea
+              name="user-comment"
+              id=""
+              cols="30"
+              rows="10"
+              class="modal-form-message"
+              placeholder="Text input"
+            ></textarea>
+            <input id="user-policy" type="text" class="modal-form-check" />
+            <label for="user-policy" class="modal-form-check-desc"
+              >I accept the terms and conditions of the
+              <a href=""> Privacy Policy </a>
+              <button type="submit" class="modal-form-submit">Send</button>
+            </label>
+          </label>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
